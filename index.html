@@ -10,6 +10,23 @@
 
   gtag('config', 'AW-17972586778');
 </script>
+  <!-- Event snippet for Sayfa görüntüleme conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17972586778/gXTOCKKn3_0bEJrS__lC',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -59,7 +76,7 @@
 
 <footer class="bg-dark text-white text-center py-4">
   <p>Luxe Ride Kıbrıs</p>
-  <p>Telefon: +90 539 119 63 07</p>
+  <p>Telefon: +90 533 825 19 89 </p>
   <p>Kuzey Kıbrıs Türk Cumhuriyeti</p>
   <a href="privacy-policy.html" class="text-white">Gizlilik Politikası</a>
 </footer>
@@ -73,4 +90,5 @@ document.getElementById("offerForm").addEventListener("submit", function(e){
 
 </body>
 </html>
+
 
